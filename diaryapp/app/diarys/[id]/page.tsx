@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
+// プリレンダリングをブロックしてリクエスト時に動的取得することを許可
+export const instant = false;
+
 type Props = {
   params: Promise<{ id: string }>;
 };

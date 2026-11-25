@@ -2,19 +2,9 @@ import styles from "./page.module.css";
 import Image from "next/image";
 
 import DiaryList from "./_components/DiaryList";
-import { Diary } from "./_libs/microcms";
+import { Suspense } from "react";
 
 export default function HomePage() {
-  const testdiary: { content: Diary[] } = {
-    content: [
-      {
-        id: "1",
-        tittle: "test",
-        text: "test",
-        createdat: "11月19日",
-      },
-    ],
-  };
   return (
     <>
       <section className={styles.top}>
@@ -33,7 +23,9 @@ export default function HomePage() {
       <nav>
         <a href="/createDiary">日記作成</a>
       </nav>
-      <DiaryList diary={testdiary.content} />
+      <Suspense fallback={<p>日記を取得中...</p>}>
+        <DiaryList />
+      </Suspense>
     </>
   );
 }
