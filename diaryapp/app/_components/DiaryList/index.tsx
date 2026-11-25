@@ -32,6 +32,7 @@ export default async function DiaryList() {
                 timeZone: "Asia/Tokyo",
               })}
             </small>
+            <Link href={`editDiary/${item.id}`}>日記を編集する</Link>
           </li>
         ))}
       </ul>

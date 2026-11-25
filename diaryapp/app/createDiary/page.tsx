@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import CreateDiaryButton from "../_components/CreateDiary";
 import { createDiary, DiaryformState } from "../action/createDiary";
+import Link from "next/link";
 
 const initialState: DiaryformState = {
   success: false,
@@ -44,6 +45,7 @@ export default function Page() {
         )}
         <CreateDiaryButton />
       </form>
+      <Link href="/">一覧に戻る</Link>
     </>
   );
 }
