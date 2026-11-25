@@ -2,6 +2,8 @@ import { supabase } from "@/lib/supabase";
 import styles from "./index.module.css";
 import Link from "next/link";
 
+import DeleteDiaryButton from "../DeleteDiary";
+
 export default async function DiaryList() {
   const { data: diaries, error } = await supabase
     .from("diary")
@@ -23,7 +25,7 @@ export default async function DiaryList() {
           <li key={index} className={styles.item}>
             <Link href={`diarys/${item.id}`}>{item.title}</Link>
             <small>
-              {new Date(item.created_at).toLocaleString("jp-JP", {
+              {new Date(item.created_at).toLocaleString("ja-JP", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
@@ -33,6 +35,7 @@ export default async function DiaryList() {
               })}
             </small>
             <Link href={`editDiary/${item.id}`}>日記を編集する</Link>
+            <DeleteDiaryButton id={`${item.id}`} />
           </li>
         ))}
       </ul>
