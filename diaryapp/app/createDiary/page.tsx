@@ -1,8 +1,8 @@
 "use client";
 
 import { useActionState } from "react";
-import CreateDiaryButton from "../_components/CreateDiary";
-import { createDiary, DiaryformState } from "../action/createDiary";
+import CreateDiaryButton from "@/_components/CreateDiary";
+import { createDiary, DiaryformState } from "@/action/createDiary";
 import Link from "next/link";
 
 const initialState: DiaryformState = {

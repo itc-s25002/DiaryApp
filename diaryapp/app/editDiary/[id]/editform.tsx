@@ -1,9 +1,9 @@
 "use client";
 
 import { useActionState } from "react";
-import { editDiary, DiaryformState } from "@/app/action/editDiarys";
+import { editDiary, DiaryformState } from "@/action/editDiarys";
 import Link from "next/link";
-import EditDiaryButton from "@/app/_components/EditDiary";
+import EditDiaryButton from "@/_components/EditDiary";
 
 type Props = {
   id: string;

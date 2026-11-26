@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { deleteDiary } from "@/app/action/deleteDiary";
+import { deleteDiary } from "@/action/deleteDiary";
 
 type Props = {
   id: string;

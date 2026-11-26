@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 
-import DiaryList from "./_components/DiaryList";
+import DiaryList from "@/_components/DiaryList";
 import { Suspense } from "react";
 
 export default function HomePage() {
